@@ -41,17 +41,20 @@ or,
 
 ## Expected Output
 
-        safesploit@guest Self-Signed_RootAuthority-main$ **gpg --fingerprint**
+        safesploit@guest$ **gpg --list-signatures**
 
         pub   rsa4096 2017-08-07 [SC] [expires: 2030-01-02]
-              6079 E6ED E834 5507 5B2E  1462 0CB5 4A16 295A 59F7
+              6079E6EDE83455075B2E14620CB54A16295A59F7
         uid           [ultimate] safesploit - Root CA
+        sig 3        0CB54A16295A59F7 2017-08-07  safesploit - Root CA
 
         pub   rsa4096 2022-02-13 [SC] [expires: 2025-02-13]
-              1E3E E4C2 E838 A0FE EEFA  FA92 36DE 9A59 CD86 9EE2
+              1E3EE4C2E838A0FEEEFAFA9236DE9A59CD869EE2
         uid           [ultimate] SWS Software Signing
+        sig 3        36DE9A59CD869EE2 2022-02-13  SWS Software Signing
+        sig          0CB54A16295A59F7 2022-02-13  safesploit - Root CA
 
-        safesploit@guest Self-Signed_RootAuthority-main$ **gpg --verify SHA512SUMS **
+        safesploit@guest$ **gpg --verify SHA512SUMS **
         gpg: Signature made [OMITTED]
         gpg:                using RSA key 1E3EE4C2E838A0FEEEFAFA9236DE9A59CD869EE2
         gpg: Good signature from "SWS Software Signing" [ultimate]
