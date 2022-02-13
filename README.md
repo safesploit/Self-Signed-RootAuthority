@@ -25,16 +25,16 @@ The expected output of $diff is that if checksums (lines) match, then nothing is
 
 Master Signing keyID: **0CB54A16295A59F7**
 
-Software Signing keyID: **ADE59E4B52BF9D95**
+Software Signing keyID: **36DE9A59CD869EE2**
 
-_ADE59E4B52BF9D95 has been signed with 0CB54A16295A59F7_
+36DE9A59CD869EE2 has been signed with 0CB54A16295A59F7_
 
 ## GPG Instructions
 
-    $ gpg --keyserver [URL] --recv-key ADE59E4B52BF9D95
+    $ gpg --keyserver [URL] --recv-key 36DE9A59CD869EE2
     $ gpg --verify SHA512SUMS
 
 or,
 
-    $ gpg --import ~/ADE59E4B52BF9D95.asc
+    $ gpg --import ~/36DE9A59CD869EE2.asc
     $ gpg --verify SHA512SUMS
