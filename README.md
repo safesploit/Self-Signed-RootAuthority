@@ -31,8 +31,10 @@ _ADE59E4B52BF9D95 has been signed with 0CB54A16295A59F7_
 
 ## GPG Instructions
 
-    $ gpg --keyserver [URL] --recv-key [keyID of Master Signing GPG]
+    $ gpg --keyserver [URL] --recv-key ADE59E4B52BF9D95
+    $ gpg --verify SHA512SUMS
 
-    $ gpg --import [keyID of Master Signing GPG]
+or,
 
+    $ gpg --import ~/ADE59E4B52BF9D95.asc
     $ gpg --verify SHA512SUMS
