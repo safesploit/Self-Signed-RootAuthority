@@ -9,7 +9,7 @@ Download the repository contents and validate using the following:
 
     $ cd ~/.../Self-Signed_RootAuthority-main
 
-    $ shasum -a 512 * > SHA512SUMS.new
+    $ find -type f ! -iname "SHA512SUMS.new" -exec shasum -a 512 "{}" + > SHA512SUMS.new
 
     $ diff SHA512SUMS SHA512SUMS.new 
 
@@ -21,7 +21,7 @@ The expected output of $diff is that if checksums (lines) match, then nothing is
 
 
 
-# GPG Importing Master Signing Key and Verifying SHA512SUMS
+# GPG Importing Software Signing Key and Verifying SHA512SUMS
 
 Master Signing keyID: **0CB54A16295A59F7**
 
