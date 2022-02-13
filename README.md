@@ -9,7 +9,7 @@ Download the repository contents and validate using the following:
 
     $ cd ~/.../Self-Signed_RootAuthority-main
 
-    $ find -type f ! -iname "SHA512SUMS.new" -exec shasum -a 512 "{}" + > SHA512SUMS.new
+    $ find -type f ! -iname "SHA512SUMS.new" -exec sha512sum "{}" + > SHA512SUMS.new
 
     $ diff SHA512SUMS SHA512SUMS.new 
 
